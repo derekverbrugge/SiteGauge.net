@@ -1,2 +1,2 @@
 # SiteGauge.net
-https://www.sitegauge.net/ website 
+https://sitegauge.net/ website 
