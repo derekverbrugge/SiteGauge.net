@@ -5,8 +5,8 @@
      crossorigin="anonymous"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SiteGauge — Website Health Check</title>
-<meta name="description" content="A simple website SEO and web health checker.">
+<title>SiteGauge — Reputation Management</title>
+<meta name="description" content="Review requests and reputation management for local businesses.">
 <style>
 :root{
   --bg:#242628;--panel:#303336;--panel2:#383b3f;--text:#f4f6f3;
@@ -62,7 +62,7 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
   .result-head{display:block}
   .result-url{margin-top:8px}
 }
-</style>
+.cta{display:inline-block;background:var(--apple);color:#17210e;text-decoration:none;font-weight:800;padding:17px 23px;border-radius:12px}.details p{color:var(--muted);line-height:1.6}</style>
 </head>
 <body>
 <div class="wrap">
@@ -71,6 +71,7 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
   <div class="header-note">SEO + web health, made simple.</div>
 </header>
 
+<!-- Previous website health-check demo retained for future reactivation.
 <section class="hero">
   <div class="kicker">Website health check</div>
   <h1>Know what to fix.</h1>
@@ -116,28 +117,11 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
   <div class="empty">Demo results shown. A production version would replace these with live measurements from your audit service.</div>
 </section>
 
-<footer><span>© 2026 SiteGauge</span><span>Simple diagnostics for better websites.</span></footer>
+
+-->
+<section class="hero"><div class="kicker">Reputation management for local businesses</div><h1>Turn great customer experiences into lasting trust.</h1><p>SiteGauge helps businesses ask customers for honest reviews, monitor feedback and strengthen their online reputation.</p><a class="cta" href="mailto:derek@derekverbrugge.com?subject=SiteGauge%20Reputation%20Audit">Request a free reputation audit →</a><p class="hint">No obligation. We'll discuss your business before preparing an audit.</p></section><section class="details" style="margin:25px 0 65px"><div class="card"><h3>Authentic review requests</h3><p>Invite customers to leave honest feedback. No incentives or review gating.</p></div><div class="card"><h3>Review monitoring</h3><p>Stay on top of public reviews and prepare professional responses.</p></div><div class="card"><h3>Practical reporting</h3><p>Track review activity and find ways to improve customer experience.</p></div><div class="card"><h3>Free starting audit</h3><p>Learn where your online reputation stands and what to do next.</p></div></section>
+<footer><span>© 2026 SiteGauge</span><span>Build trust with authentic customer feedback.</span></footer>
 </div>
-<script>
-const form=document.getElementById('checkForm');
-const input=document.getElementById('urlInput');
-const results=document.getElementById('results');
-const status=document.getElementById('status');
-const resultUrl=document.getElementById('resultUrl');
-form.addEventListener('submit',e=>{
-  e.preventDefault();
-  let value=input.value.trim();
-  if(!/^https?:\/\//i.test(value)) value='https://'+value;
-  try{ value=new URL(value).href; }catch{ input.focus(); return; }
-  status.style.display='block';
-  status.textContent='Preparing your website check…';
-  setTimeout(()=>{
-    status.style.display='none';
-    resultUrl.textContent=value;
-    results.style.display='block';
-    results.scrollIntoView({behavior:'smooth',block:'start'});
-  },450);
-});
-</script>
+<!-- Previous demo script disabled. -->
 </body>
 </html>
